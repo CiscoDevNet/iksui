@@ -50,9 +50,9 @@ IKS is a SaaS-delivered, turn-key container management platform for multicloud, 
 
 ## Prerequisites
 
-*   Please verify licensing requirement to use the Intersight Kubernetes Service:
+*   Please verify licensing requirement to use the Intersight Kubernetes Service. you will need the Premier or Advantage license to be able to use IKS:
 
-TBD - what are the reqs? premier/advantage?
+![](intersight-04-iks-hello-images/license.png)
 
 *   Please make a reservation at the following IKS with UI & ClickOps Sandbox:
 
