@@ -50,21 +50,19 @@ IKS is a SaaS-delivered, turn-key container management platform for multicloud, 
 
 ## Prerequisites
 
-*   Please verify licensing requirement to use the Intersight Kubernetes Service. you will need the Premier or Advantage license to be able to use IKS:
+*   Please verify licensing requirement to use the Intersight Kubernetes Service. You will need the Premier or Advantage license to be able to use IKS:
 
 ![](intersight-04-iks-hello-images/license.png)
 
 *   Please make a reservation at the following IKS with UI & ClickOps Sandbox:
 
-TBD - link?
-
-![](intersight-03-iks-hello-images/Picture3.png)
+TBD - link to SB?
 
 *   Upon reservation, you will have received another email indicating access to VPN credentials.
 
 ![](intersight-03-iks-hello-images/Picture4.png)
 
-*   Follow those instructions to connect to the necessary VPN connection (this is necessary to access the vSphere, IKS cluster and App instance later.)
+*   Follow above instructions to connect to the necessary VPN connection (this is necessary to access the vSphere, IKS cluster and App instance later.)
 
 ## Pre-configured elements (Sandbox Topology)
 
@@ -92,7 +90,7 @@ Next login to Intersight with the link provided in your invitation email.
 
 __Step 1:__: Examine pre-configured elements (Intersight Targets)
 
-The following targets are pre-configured in Intersight corresponding to the remote entities and agents that it integrates with.
+The following targets are pre-configured in Intersight corresponding to the remote entities and agents that it integrates with. Please ignore the Terraform related Targets since we will not be using those in this learning lab.
 
 ![](intersight-03-iks-hello-images/Picture5.png)
 
@@ -114,31 +112,39 @@ Provision the following based on your specific vSphere installation and click Cr
 
 # Use Intersight UI to provision IKS policies
 
-Next, you will now wear the hat of a Cloud Admin persona and provision IKS policies that will be leveraged by your DevOps to provision their IKS cluster. 
+Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. 
 
-Note that though the following policies are currently supported, we will configure the minimal policies needed for this learning lab to set up a single node IKS cluster:
+The following are the policies tht you can configure:
 
 ![](intersight-03-iks-hello-images/Picture18.png)
 
+__Step 1:__: Configure Kubernetes Version Policy:
 
+![](intersight-04-iks-hello-images/kubever.png)
 
-__Step 1:__: 
+__Step 2:__: Configure Container Runtime Policy:
 
-__Step 2:__: 
+![](intersight-04-iks-hello-images/contrt.png)
 
-__Step 3:__: 
+__Step 3:__: Configure Network CIDR Policy:
 
+![](intersight-04-iks-hello-images/netcidr.png)
 
+__Step 4:__: Configure Node OS Policy
 
+![](intersight-04-iks-hello-images/nodeos.png)
 
-__Step 4:__: 
+__Step 5:__: Configure Trusted Certificate Authorities Policy:
 
+![](intersight-04-iks-hello-images/cert.png)
 
-__Step 5:__: 
+__Step 6:__: Configure Virtual Machine Infra Config:
 
-__Step 6:__: 
+![](intersight-04-iks-hello-images/infra.png)
 
-__Step 7:__: 
+__Step 7:__: Cofigure Virtual Machine Instance Type
+
+![](intersight-04-iks-hello-images/inst.png)
 
 Your DevOps personnel can now provision an IKS cluster based on the above policies.
 
