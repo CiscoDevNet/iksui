@@ -108,7 +108,7 @@ Provision the following with the Sandbox infrastructure parameters and click Cre
 
 ![](intersight-04-iks-hello-images/ippool1.png)
 
-![](intersight-04-iks-hello-images/ippoo2.png)
+![](intersight-04-iks-hello-images/ippool2.png)
 
 # Use Intersight UI to provision IKS policies
 
