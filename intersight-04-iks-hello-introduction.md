@@ -182,21 +182,51 @@ Your DevOps personnel can now provision an IKS cluster based on the above polici
 
 # Use Intersight UI to provision IKS profile for you IKS cluster
 
-Next, you will provision an IKS Profile. This defines the IKS cluster you want to create
+Next, you will provision an IKS Profile. This defines the IKS cluster you want to create:
+
+![](intersight-04-iks-hello-images/main.png)
 
 __Step 1__: Configire IKS General Info:
 
 ![](intersight-04-iks-hello-images/gen.png)
 
-__Step 2__: Configure IKS Cluster 
+__Step 2__: Configure IKS Cluster - select IP Pool 
 
 ![](intersight-04-iks-hello-images/cluster.png)
+
+__Step 2__: Configure IKS Cluster - select Node OS Policy 
+
+![](intersight-04-iks-hello-images/cluster2.png)
+
+__Step 2__: Configure IKS Cluster - select Network CIDR Policy 
+
+![](intersight-04-iks-hello-images/cluster3.png)
+
+__Step 2__: Configure IKS Cluster - configure Load Balancer Count and SSH key
+
+![](intersight-04-iks-hello-images/cluster4.png)
 
 __Step 3__: Configure Control Plane Node Pool 
 
 ![](intersight-04-iks-hello-images/ctrl.png)
 
-__Step 4__: Configure Worker Node Pools
+__Step 3__: Configure Control Plane Node Pool - select ippool
+
+![](intersight-04-iks-hello-images/ctrl2.png)
+
+__Step 3__: Configure Control Plane Node Pool - select Virtual Machine Infra Config Policy
+
+![](intersight-04-iks-hello-images/ctrl3.png)
+
+__Step 3__: Configure Control Plane Node Pool - select Virtual Machine Instance Policy
+
+![](intersight-04-iks-hello-images/ctrl4.png)
+
+__Step 3__: Configure Control Plane Node Pool - select Desired Size for Control Plane
+
+![](intersight-04-iks-hello-images/ctrl5.png)
+
+__Step 4__: Configure Worker Node Pools - select ippool and number of worker nodes
 
 ![](intersight-04-iks-hello-images/worker.png)
 
@@ -204,9 +234,17 @@ __Step 5__: Configure Add-ons
 
 ![](intersight-04-iks-hello-images/add.png)
 
-__Step 5__: Submit Cluster Provisioning Request and view Workflow
+__Step 5__: Submit Cluster Provisioning Request
 
 ![](intersight-04-iks-hello-images/summary.png)
+
+__Step 5__: Verify Cluster Provisioning Request is Configuring
+
+![](intersight-04-iks-hello-images/config.png)
+
+__Step 5__: Examine Cluster Provisioning Request Workflow
+
+![](intersight-04-iks-hello-images/workflow.png)
 
 __Step 7__: Login to Intersight and verify that the cluster is configured:
 
