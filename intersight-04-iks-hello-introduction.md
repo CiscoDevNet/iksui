@@ -173,6 +173,11 @@ __Step 5:__: Cofigure Virtual Machine Instance Type
 
 
 
+Your policy configuration listing should now looks as follows:
+
+![](intersight-04-iks-hello-images/pol.png)
+
+
 Your DevOps personnel can now provision an IKS cluster based on the above policies.
 
 # Use Intersight UI to provision IKS profile for you IKS cluster
