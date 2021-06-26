@@ -118,6 +118,11 @@ The following are the policies that you can configure:
 
 ![](intersight-03-iks-hello-images/Picture18.png)
 
+
+PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
+
+
+
 __Step 1:__: Configure Kubernetes Version Policy:
 
 ![](intersight-04-iks-hello-images/kubever1.png)
@@ -126,9 +131,17 @@ __Step 1:__: Configure Kubernetes Version Policy:
 
 ![](intersight-04-iks-hello-images/kubever3.png)
 
+
+
 __Step 2:__: Configure Network CIDR Policy:
 
-![](intersight-04-iks-hello-images/netcidr.png)
+![](intersight-04-iks-hello-images/netcidr1.png)
+
+![](intersight-04-iks-hello-images/netcidr2.png)
+
+![](intersight-04-iks-hello-images/netcidr3.png)
+
+
 
 __Step 3:__: Configure Node OS Policy
 
@@ -138,13 +151,19 @@ __Step 3:__: Configure Node OS Policy
 
 ![](intersight-04-iks-hello-images/nodeos3.png)
 
+
+
 __Step 4:__: Configure Virtual Machine Infra Config:
 
 ![](intersight-04-iks-hello-images/infra.png)
 
+
+
 __Step 5:__: Cofigure Virtual Machine Instance Type
 
 ![](intersight-04-iks-hello-images/inst.png)
+
+
 
 Your DevOps personnel can now provision an IKS cluster based on the above policies.
 
