@@ -114,7 +114,7 @@ Provision the following based on your specific vSphere installation and click Cr
 
 Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. 
 
-The following are the policies tht you can configure:
+The following are the policies that you can configure:
 
 ![](intersight-03-iks-hello-images/Picture18.png)
 
@@ -148,28 +148,35 @@ __Step 7:__: Cofigure Virtual Machine Instance Type
 
 Your DevOps personnel can now provision an IKS cluster based on the above policies.
 
-# Use Intersight UI to provision IKS profile
+# Use Intersight UI to provision IKS profile for you IKS cluster
 
-# Use Intersight UI to provision IKS cluster
+Next, you will provision an IKS Profile. This defines the IKS cluster you want to create
 
-Next, you will now wear the hat of a DevOps persona and provision an IKS cluster. In real life, the IKS cluster profile will be driven by requirements from the App team. For the purposes of this lab, we will create a cluster with minimal resources considering that the sandbox is a resource constrained environment.
+__Step 1__: Configire IKS General Info:
 
-__Step 1__: 
+![](intersight-04-iks-hello-images/gen.png)
 
-__Step 2__: 
+__Step 2__: Configure IKS Cluster 
 
-__Step 3__: 
+![](intersight-04-iks-hello-images/cluster.png)
 
+__Step 3__: Configure Control Plane Node Pool 
 
-__Step 4__: 
+![](intersight-04-iks-hello-images/ctrl.png)
 
+__Step 4__: Configure Worker Node Pools
 
+![](intersight-04-iks-hello-images/worker.png)
 
-__Step 5__: 
+__Step 5__: Configure Add-ons
 
+![](intersight-04-iks-hello-images/add.png)
 
+__Step 5__: Submit Cluster Provisioning Request and view Workflow
 
-__Step 6__: Login to Intersight and verify that the cluster is configured:
+![](intersight-04-iks-hello-images/summary.png)
+
+__Step 7__: Login to Intersight and verify that the cluster is configured:
 
 ![](intersight-03-iks-hello-images/Picture22.png)
 
