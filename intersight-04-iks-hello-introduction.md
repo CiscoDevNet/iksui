@@ -132,7 +132,11 @@ __Step 2:__: Configure Network CIDR Policy:
 
 __Step 3:__: Configure Node OS Policy
 
-![](intersight-04-iks-hello-images/nodeos.png)
+![](intersight-04-iks-hello-images/nodeos1.png)
+
+![](intersight-04-iks-hello-images/nodeos2.png)
+
+![](intersight-04-iks-hello-images/nodeos3.png)
 
 __Step 4:__: Configure Virtual Machine Infra Config:
 
