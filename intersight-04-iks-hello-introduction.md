@@ -155,7 +155,11 @@ __Step 3:__: Configure Node OS Policy
 
 __Step 4:__: Configure Virtual Machine Infra Config:
 
-![](intersight-04-iks-hello-images/infra.png)
+![](intersight-04-iks-hello-images/infra1.png)
+
+![](intersight-04-iks-hello-images/infra2.png)
+
+![](intersight-04-iks-hello-images/infra3.png)
 
 
 
