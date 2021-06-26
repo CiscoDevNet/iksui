@@ -165,7 +165,11 @@ __Step 4:__: Configure Virtual Machine Infra Config:
 
 __Step 5:__: Cofigure Virtual Machine Instance Type
 
-![](intersight-04-iks-hello-images/inst.png)
+![](intersight-04-iks-hello-images/inst1.png)
+
+![](intersight-04-iks-hello-images/inst2.png)
+
+![](intersight-04-iks-hello-images/inst3.png)
 
 
 
