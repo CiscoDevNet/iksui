@@ -31,8 +31,8 @@ When you complete this Learning Lab, you will be familiar with:
 
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 On eof the main tenets of Kubernetes is giving you the freedom to take advantage of on-premises, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.
- 
-TBD - more explanation?
+
+While DevOps has successfully leveraged public clouds offerings of Kubernetes to host containerized workloads, IKS provides the platform to bring the same cloud experience on prem on your vSphere Infrastructure.
 
 ### Intersight Kubernetes Service - IKS
 
@@ -100,11 +100,11 @@ The above targets are required to account for Intersight's integrations with the
 
 # Use Intersight UI to provision IP Pool
 
-As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual applicatio teams.
+As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams.
 
 ![](intersight-04-iks-hello-images/ippool.png)
 
-Provision the following based on your specific vSphere installation and click Create. You can skip the IPv6 tab  for now since the support for this is currently not available.
+Provision the following with the Sandbox infrastructure parameters and click Create. You can skip the IPv6 tab  for now since the support for this is currently not available.
 
 ![](intersight-04-iks-hello-images/ippool1.png)
 
