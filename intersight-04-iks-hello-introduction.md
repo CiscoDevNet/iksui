@@ -120,29 +120,25 @@ The following are the policies that you can configure:
 
 __Step 1:__: Configure Kubernetes Version Policy:
 
-![](intersight-04-iks-hello-images/kubever.png)
+![](intersight-04-iks-hello-images/kubever1.png)
 
-__Step 2:__: Configure Container Runtime Policy:
+![](intersight-04-iks-hello-images/kubever2.png)
 
-![](intersight-04-iks-hello-images/contrt.png)
+![](intersight-04-iks-hello-images/kubever3.png)
 
-__Step 3:__: Configure Network CIDR Policy:
+__Step 2:__: Configure Network CIDR Policy:
 
 ![](intersight-04-iks-hello-images/netcidr.png)
 
-__Step 4:__: Configure Node OS Policy
+__Step 3:__: Configure Node OS Policy
 
 ![](intersight-04-iks-hello-images/nodeos.png)
 
-__Step 5:__: Configure Trusted Certificate Authorities Policy:
-
-![](intersight-04-iks-hello-images/cert.png)
-
-__Step 6:__: Configure Virtual Machine Infra Config:
+__Step 4:__: Configure Virtual Machine Infra Config:
 
 ![](intersight-04-iks-hello-images/infra.png)
 
-__Step 7:__: Cofigure Virtual Machine Instance Type
+__Step 5:__: Cofigure Virtual Machine Instance Type
 
 ![](intersight-04-iks-hello-images/inst.png)
 
