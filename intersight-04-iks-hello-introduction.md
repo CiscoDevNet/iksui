@@ -107,11 +107,16 @@ As a Cloud Admin, you will allocate ip pools to the various application teams to
 Provision the following with the Sandbox infrastructure parameters and click Create. You can skip the IPv6 tab  for now since the support for this is currently not available.
 
 Subnet Mask 255.255.255.0
+
 Default Gateway 10.10.20.254
+
 Primary DNS 10.10.20.100
+
 Secondary DNS - NA
+
 Start Address - 10.10.20.170
-Number - 30
+
+Number - 20
 
 
 ![](intersight-04-iks-hello-images/ippool1.png)
@@ -144,6 +149,7 @@ __Step 1:__: Configure Kubernetes Version Policy:
 __Step 2:__: Configure Network CIDR Policy:
 
 POD Network CIDR 100.65.0.0/16
+
 Service CIDR 100.64.0.0/24
 
 ![](intersight-04-iks-hello-images/netcidr1.png)
@@ -157,8 +163,11 @@ Service CIDR 100.64.0.0/24
 __Step 3:__: Configure Node OS Policy
 
 Timezone - America/New_York
+
 DNS Suffix - demo.intra
+
 DNS Server1 - 10.10.20.100
+
 NTP Server1 - 10.10.20.100
 
 ![](intersight-04-iks-hello-images/nodeos1.png)
@@ -172,9 +181,13 @@ NTP Server1 - 10.10.20.100
 __Step 4:__: Configure Virtual Machine Infra Config:
 
 ESXi Cluster - HyperFlex
+
 Datastore - SpringpathDS-10.10.20.121
+
 Interface #3 - NA
+
 Resource Pool - Test_Resource_Pool
+
 vSphere Admin Passphrase - PurplePigChevy88!
 
 ![](intersight-04-iks-hello-images/infra1.png)
@@ -188,7 +201,9 @@ vSphere Admin Passphrase - PurplePigChevy88!
 __Step 5:__: Cofigure Virtual Machine Instance Type
 
 CPU - 4
+
 System Disk Size (GiB) - 40
+
 Memory (MiB) - 16384
 
 ![](intersight-04-iks-hello-images/inst1.png)
