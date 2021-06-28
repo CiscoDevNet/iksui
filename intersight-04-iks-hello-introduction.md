@@ -100,7 +100,7 @@ The above targets are required to account for Intersight's integrations with the
 
 # Use Intersight UI to provision IP Pool
 
-As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams.
+As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams. PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
 
 ![](intersight-04-iks-hello-images/ippool.png)
 
@@ -125,14 +125,11 @@ Number - 20
 
 # Use Intersight UI to provision IKS policies
 
-Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. 
+Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
 
 The following are the policies that you can configure:
 
 ![](intersight-03-iks-hello-images/Picture18.png)
-
-
-PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
 
 
 
