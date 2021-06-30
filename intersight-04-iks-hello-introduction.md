@@ -15,6 +15,7 @@ When you complete this Learning Lab, you will be familiar with:
 *   Use Intersight UI to scale up the cluster
 *   Use Intersight UI to Undeploy IKS cluster
 *   Use Intersight UI to Delete IKS Profile
+*   Use Intersight UI to Delete IKS Policies
 
 ## Audience
 *	Cloud Admins who would like to provide IT Container As A Service (CAAS) on vSphere Infrastructure  
