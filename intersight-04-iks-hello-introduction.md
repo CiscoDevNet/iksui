@@ -2,7 +2,7 @@
 
 This lab walks you through the provisioning of an IKS cluster in Intersight using its UI and ClickOps. To automate the same with Intersight Service for Terraform, please refer to the following learning lab and sandbox:
 
-TBD
+https://devnetsandbox.cisco.com/RM/Diagram/Index/daad55dd-45f1-46c6-a1b4-7339b318c970?diagramType=Topology
 
 ## Objectives
 
@@ -56,7 +56,7 @@ IKS is a SaaS-delivered, turn-key container management platform for multicloud, 
 
 *   Please make a reservation at the following IKS with UI & ClickOps Sandbox:
 
-TBD - link to SB?
+TBD - link to new SB?
 
 *   Upon reservation, you will have received another email indicating access to VPN credentials.
 
