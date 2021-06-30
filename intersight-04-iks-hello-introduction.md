@@ -305,17 +305,17 @@ Update the cluster profile and include the add on policy, Deploy:
 
 Download the kubeconfig for the cluster updated and execute the following commands to get the token for Dashboard access:
 
-kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token
+    kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token
 
-kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
+    kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
 
 Get the ingress-controller-IP:
 
-kubectl --kubeconfig <cluster-kubeconfig> -n iks get svc essential-nginx-ingress-ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+    kubectl --kubeconfig <cluster-kubeconfig> -n iks get svc essential-nginx-ingress-ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 
 Access the Dashboard at and enter the token acquired above:
 
-https://<ingress-controller-IP>/dashboard/
+    https://<ingress-controller-IP>/dashboard/
 
 ![](intersight-04-iks-hello-images/dash.png)
 
@@ -327,9 +327,9 @@ Update the cluster profile and increase the number of worker nodes, Deploy:
 
 Generate token and access the Dashboard:
 
-kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
+    kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
 
-https://<ingress-controller-IP>/dashboard/
+    https://<ingress-controller-IP>/dashboard/
 
 Check to see that the cluster has been scaled up:
 
