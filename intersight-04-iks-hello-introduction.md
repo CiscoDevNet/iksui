@@ -88,7 +88,7 @@ This is the hypervisor managing the IKS cluster VM’s being created for k8s con
 
 Next login to Intersight with the link provided in your invitation email. 
 
-__Step 1:__: Examine pre-configured elements (Intersight Targets)
+Examine pre-configured elements (Intersight Targets)
 
 The following targets are pre-configured in Intersight corresponding to the remote entities and agents that it integrates with. Please ignore the Terraform related Targets since we will not be using those in this learning lab.
 
@@ -96,7 +96,7 @@ The following targets are pre-configured in Intersight corresponding to the remo
 
 
 
-The above targets are required to account for Intersight's integrations with the on prem entities. If any of the above shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation.
+The above targets are required to account for Intersight's integrations with the on prem entities. If te vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation.
 
 # Use Intersight UI to provision IP Pool
 
@@ -145,9 +145,9 @@ __Step 1:__: Configure Kubernetes Version Policy:
 
 __Step 2:__: Configure Network CIDR Policy:
 
-POD Network CIDR 100.65.0.0/16
+POD Network CIDR - 100.65.0.0/16
 
-Service CIDR 100.64.0.0/24
+Service CIDR - 100.64.0.0/24
 
 ![](intersight-04-iks-hello-images/netcidr1.png)
 
@@ -181,11 +181,11 @@ ESXi Cluster - HyperFlex
 
 Datastore - SpringpathDS-10.10.20.121
 
-Interface #3 - NA
+Interface  - VM Network
 
 Resource Pool - Test_Resource_Pool
 
-vSphere Admin Passphrase - PurplePigChevy88!
+vSphere Admin Passphrase - <Enter the password that you got in your invitation email>
 
 ![](intersight-04-iks-hello-images/infra1.png)
 
@@ -228,63 +228,63 @@ __Step 1__: Configire IKS General Info:
 
 ![](intersight-04-iks-hello-images/gen.png)
 
-__Step 2__: Configure IKS Cluster - select IP Pool 
+__Step 2__: Configure IKS Cluster - select IP Pool
 
 ![](intersight-04-iks-hello-images/cluster.png)
 
-__Step 2__: Configure IKS Cluster - select Node OS Policy 
+__Step 3__: Configure IKS Cluster - select Node OS Policy 
 
 ![](intersight-04-iks-hello-images/cluster2.png)
 
-__Step 2__: Configure IKS Cluster - select Network CIDR Policy 
+__Step 4__: Configure IKS Cluster - select Network CIDR Policy 
 
 ![](intersight-04-iks-hello-images/cluster3.png)
 
-__Step 2__: Configure IKS Cluster - configure Load Balancer Count and SSH key
+__Step 5__: Configure IKS Cluster - configure Load Balancer Count and SSH key
 
 ![](intersight-04-iks-hello-images/cluster4.png)
 
-__Step 3__: Configure Control Plane Node Pool 
+__Step 6__: Configure Control Plane Node Pool 
 
 ![](intersight-04-iks-hello-images/ctrl.png)
 
-__Step 3__: Configure Control Plane Node Pool - select ippool
+__Step 7__: Configure Control Plane Node Pool - select ippool
 
 ![](intersight-04-iks-hello-images/ctrl2.png)
 
-__Step 3__: Configure Control Plane Node Pool - select Virtual Machine Infra Config Policy
+__Step 8__: Configure Control Plane Node Pool - select Virtual Machine Infra Config Policy
 
 ![](intersight-04-iks-hello-images/ctrl3.png)
 
-__Step 3__: Configure Control Plane Node Pool - select Virtual Machine Instance Policy
+__Step 9__: Configure Control Plane Node Pool - select Virtual Machine Instance Policy
 
 ![](intersight-04-iks-hello-images/ctrl4.png)
 
-__Step 3__: Configure Control Plane Node Pool - select Desired Size for Control Plane
+__Step 10__: Configure Control Plane Node Pool - select Desired Size for Control Plane
 
 ![](intersight-04-iks-hello-images/ctrl5.png)
 
-__Step 4__: Configure Worker Node Pools - select ippool and number of worker nodes
+__Step 11__: Configure Worker Node Pools - select ippool and number of worker nodes
 
 ![](intersight-04-iks-hello-images/worker.png)
 
-__Step 5__: Configure Add-ons
+__Step 12__: Configure Add-ons
 
 ![](intersight-04-iks-hello-images/add.png)
 
-__Step 5__: Submit Cluster Provisioning Request
+__Step 13__: Submit Cluster Provisioning Request
 
 ![](intersight-04-iks-hello-images/summary.png)
 
-__Step 5__: Verify Cluster Provisioning Request is Configuring
+__Step 14__: Verify Cluster Provisioning Request is Configuring
 
 ![](intersight-04-iks-hello-images/config.png)
 
-__Step 5__: Examine Cluster Provisioning Request Workflow
+__Step 15__: Examine Cluster Provisioning Request Workflow
 
 ![](intersight-04-iks-hello-images/workflow.png)
 
-__Step 7__: Login to Intersight and verify that the cluster is configured:
+__Step 16__: Login to Intersight and verify that the cluster is configured:
 
 ![](intersight-04-iks-hello-images/connected.png)
 
