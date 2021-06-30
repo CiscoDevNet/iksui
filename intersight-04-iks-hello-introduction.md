@@ -13,9 +13,8 @@ When you complete this Learning Lab, you will be familiar with:
 *   Use Intersight UI to provision IKS cluster
 *   Use Intersight UI to configure IKS add-ons
 *   Use Intersight UI to scale up and down the cluster
-*   Use Intersight UI to change policies affecting several IKS clusters
-*   Use Intersight UI to Undeploy IKS profiles
-*   Use Intersight UI to Delete IKS Clusters
+*   Use Intersight UI to Undeploy IKS cluster
+*   Use Intersight UI to Delete IKS Profile
 
 ## Audience
 *	Cloud Admins who would like to provide IT Container As A Service (CAAS) on vSphere Infrastructure  
@@ -289,15 +288,78 @@ __Step 16__: Login to Intersight and verify that the cluster is configured:
 ![](intersight-04-iks-hello-images/connected.png)
 
 
-
-Your App Developers can now deploy their containerized apps on the IKS cluster.
+Your App Developers can now deploy their containerized apps on the IKS cluster using kubectl or helm.
 
 
 # Use Intersight UI to configure IKS add-ons
 
+Create a policy for the Dashboard add on:
+
+![](intersight-04-iks-hello-images/addonpol.png)
+
+![](intersight-04-iks-hello-images/addonpol2.png)
+
+Update the cluster profile and include the add on policy, Deploy:
+
+![](intersight-04-iks-hello-images/addonprof.png)
+
+Download the kubeconfig for the cluster updated and execute the following commands to get the token for Dashboard access:
+
+kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token
+
+kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
+
+Get the ingress-controller-IP:
+
+kubectl --kubeconfig <cluster-kubeconfig> -n iks get svc essential-nginx-ingress-ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+
+Access the Dashboard at and enter the token acquired above:
+
+https://<ingress-controller-IP>/dashboard/
+
+![](intersight-04-iks-hello-images/dash.png)
+
+# Use Intersight UI to scale up and down the cluster
+
+Update the cluster profile and increase the number of worker nodes, Deploy:
+
+![](intersight-04-iks-hello-images/scaleup.png)
+
+Generate token and access the Dashboard:
+
+kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
+
+https://<ingress-controller-IP>/dashboard/
+
+Check to see that the cluster has been scaled up:
+
+![](intersight-04-iks-hello-images/dashscale.png)
+
+# Use Intersight UI to Undeploy IKS cluster
+
+Select cluster profile and Undeploy the IKS cluster before deleting it:
+
+![](intersight-04-iks-hello-images/undeploy.png)
+
+Check the workflow for the undeployment to terminate:
+
+![](intersight-04-iks-hello-images/unwf.png)
+
+# Use Intersight UI to Delete IKS Profile
+
+After cluster undeployment is done, please delete the cluster profile:
+
+![](intersight-04-iks-hello-images/clsdel.png)
+
+# Use Intersight UI to Delete IKS Policies
+
+Select each of the following policies and delete:
+
+![](intersight-04-iks-hello-images/poldel.png)
+
 # Terminating you sandbox and cleanup
 
-This concludes this learning lab. We hope you got an overview of IST and TFCB and the value add of the integration of two flagship products - Cisco's Intersight and HashiCorp's Terraform Cloud for Business.
+This concludes this learning lab. We hope you got an overview of provisioning and de-provisioning IKS clusters.
 
 Help us terminate the sandbox and prepare it for the next labuser by terminating the sandbox that you just reserved:
 
