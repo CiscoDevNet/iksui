@@ -12,7 +12,7 @@ When you complete this Learning Lab, you will be familiar with:
 *   Use Intersight UI to provision IKS profiles
 *   Use Intersight UI to provision IKS cluster
 *   Use Intersight UI to configure IKS add-ons
-*   Use Intersight UI to scale up and down the cluster
+*   Use Intersight UI to scale up the cluster
 *   Use Intersight UI to Undeploy IKS cluster
 *   Use Intersight UI to Delete IKS Profile
 
@@ -319,7 +319,7 @@ https://<ingress-controller-IP>/dashboard/
 
 ![](intersight-04-iks-hello-images/dash.png)
 
-# Use Intersight UI to scale up and down the cluster
+# Use Intersight UI to scale up the cluster
 
 Update the cluster profile and increase the number of worker nodes, Deploy:
 
@@ -353,7 +353,7 @@ After cluster undeployment is done, please delete the cluster profile:
 
 # Use Intersight UI to Delete IKS Policies
 
-Select each of the following policies and delete:
+Select all the IKS policies and delete:
 
 ![](intersight-04-iks-hello-images/poldel.png)
 
