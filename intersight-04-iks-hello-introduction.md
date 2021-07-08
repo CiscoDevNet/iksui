@@ -9,13 +9,12 @@ https://devnetsandbox.cisco.com/RM/Diagram/Index/daad55dd-45f1-46c6-a1b4-7339b31
 When you complete this Learning Lab, you will be familiar with:
 *	Use Intersight UI to provision IP Pool
 *   Use Intersight UI to provision IKS policies
-*   Use Intersight UI to provision IKS profiles
-*   Use Intersight UI to provision IKS cluster
+*   Use Intersight UI to provision IKS cluster profiles 
 *   Use Intersight UI to configure IKS add-ons
 *   Use Intersight UI to scale up the cluster
-*   Use Intersight UI to Undeploy IKS cluster
-*   Use Intersight UI to Delete IKS Profile
-*   Use Intersight UI to Delete IKS Policies
+*   Use Intersight UI to undeploy IKS cluster
+*   Use Intersight UI to delete IKS cluster profiles
+*   Use Intersight UI to delete IKS policies
 
 ## Audience
 *	Cloud Admins who would like to provide IT Container As A Service (CAAS) on vSphere Infrastructure  
@@ -30,7 +29,7 @@ When you complete this Learning Lab, you will be familiar with:
 ### Kubernetes as a Container Orchestration Platform
 
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
-On eof the main tenets of Kubernetes is giving you the freedom to take advantage of on-premises, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.
+One of the main tenets of Kubernetes is giving you the freedom to take advantage of on-premises, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.
 
 While DevOps has successfully leveraged public clouds offerings of Kubernetes to host containerized workloads, IKS provides the platform to bring the same cloud experience on prem on your vSphere Infrastructure.
 
@@ -38,11 +37,11 @@ While DevOps has successfully leveraged public clouds offerings of Kubernetes to
 
 IKS is a SaaS-delivered, turn-key container management platform for multicloud, consistent production-grade Kubernetes. It:
 
-*	runs on ANY infrastructure as a lightweight self-hosted software. Optimized for Cisco HX and UCS, deployed on top of VMware vSphere, with bare metal options coming soon
-*	automates the installation, deployment and lifecycle management (OS updates/Kubernetes updates) of 100% upstream self-service K8s clusters via an easy-to-use simple ser interface
-*	includes all the necessary networking (CNI, ACI CNI, Istio service mesh), persistent storage (CSI), logging (EKF), monitoring (Prometheus/Grafana), L4/L7 load balancing and registry tooling, RBAC configuration
+*	runs on ANY infrastructure as a lightweight self-hosted software. Optimized for Cisco HX and UCS, deployed on top of VMware vSphere, with other Hypervisors and bare metal options coming soon
+*	automates the deployment and lifecycle management (OS updates/Kubernetes updates) of 100% upstream self-service K8s clusters via an easy-to-use user interface
+*	includes all the necessary networking (Calico CNI and Istio Servicemesh), persistent storage (vsphere CSI), monitoring (Prometheus/Grafana), L4/L7 load balancing, registry tooling and RBAC  configuration
 *	integrates with AWS, Azure, and Google Cloud (coming soon)
-*	is built for the enterprise with hardened security and enhanced availability features like multi-master nodes and self-healing
+*	is built for the enterprise with hardened security and enhanced availability features like multiple control nodes and self-healing features
 *	optimized for AI/ML workloads with multi-GPU support
 
 ![](intersight-03-iks-hello-images/Picture2.png)
@@ -51,6 +50,7 @@ IKS is a SaaS-delivered, turn-key container management platform for multicloud, 
 ## Prerequisites
 
 *   Please verify licensing requirement to use the Intersight Kubernetes Service. You will need the Premier or Advantage license to be able to use IKS:
+BA: Not sure how this is a pre-req. They will use the Sandbox Intersight Account right? 
 
 ![](intersight-04-iks-hello-images/license.png)
 
@@ -86,38 +86,37 @@ This is the hypervisor managing the IKS cluster VM’s being created for k8s con
 
 # Login to Intersight
 
-Next login to Intersight with the link provided in your invitation email. 
+1. Login to Intersight with the link provided in your invitation email. 
 
-Examine pre-configured elements (Intersight Targets)
-
+2. Examine pre-configured elements (Intersight Targets)
 The following targets are pre-configured in Intersight corresponding to the remote entities and agents that it integrates with. Please ignore the Terraform related Targets since we will not be using those in this learning lab.
 
 ![](intersight-03-iks-hello-images/Picture5.png)
 
 
 
-The above targets are required to account for Intersight's integrations with the on prem entities. If te vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation.
+The above targets are required for Intersight's integrations with the on-premise entities. 
+
+**!! If the vSphere Target shows as "Not Connected", try editing the Target** and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation.
 
 # Use Intersight UI to provision IP Pool
 
-As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams. PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
+As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams. 
+
+**!! PLEASE USE THE VALUES SPECIFIED IN THE SCREENSHOTS AND BELOW. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.**
 
 ![](intersight-04-iks-hello-images/ippool.png)
 
 Provision the following with the Sandbox infrastructure parameters and click Create. You can skip the IPv6 tab  for now since the support for this is currently not available.
 
-Subnet Mask 255.255.255.0
-
-Default Gateway 10.10.20.254
-
-Primary DNS 10.10.20.100
-
-Secondary DNS - NA
-
-Start Address - 10.10.20.170
-
-Number - 20
-
+```
+Subnet Mask        = 255.255.255.0
+Default Gateway    = 10.10.20.254
+Primary DNS        = 10.10.20.100
+Secondary DNS      = NA
+Start Address      = 10.10.20.170
+Number             = 30
+```
 
 ![](intersight-04-iks-hello-images/ippool1.png)
 
@@ -125,7 +124,8 @@ Number - 20
 
 # Use Intersight UI to provision IKS policies
 
-Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.
+Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. 
+**PLEASE USE THE VALUES SPECIFIED IN THE SCREENSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION.**
 
 The following are the policies that you can configure:
 
@@ -133,7 +133,7 @@ The following are the policies that you can configure:
 
 
 
-__Step 1:__: Configure Kubernetes Version Policy:
+__Step 1::__ Configure Kubernetes Version Policy:
 
 ![](intersight-04-iks-hello-images/kubever1.png)
 
@@ -143,11 +143,12 @@ __Step 1:__: Configure Kubernetes Version Policy:
 
 
 
-__Step 2:__: Configure Network CIDR Policy:
+__Step 2::__ Configure Network CIDR Policy:
 
-POD Network CIDR - 100.65.0.0/16
-
-Service CIDR - 100.64.0.0/24
+```
+POD Network CIDR = 100.65.0.0/16
+Service CIDR     = 100.64.0.0/24
+```
 
 ![](intersight-04-iks-hello-images/netcidr1.png)
 
@@ -157,15 +158,14 @@ Service CIDR - 100.64.0.0/24
 
 
 
-__Step 3:__: Configure Node OS Policy
+__Step 3::__ Configure Node OS Policy
 
-Timezone - America/New_York
-
-DNS Suffix - demo.intra
-
-DNS Server1 - 10.10.20.100
-
-NTP Server1 - 10.10.20.100
+```
+Timezone    = America/Los_Angeles
+DNS Suffix  = demo.intra
+DNS Server1 = 10.10.20.100
+NTP Server1 = 10.10.20.100
+```
 
 ![](intersight-04-iks-hello-images/nodeos1.png)
 
@@ -175,16 +175,14 @@ NTP Server1 - 10.10.20.100
 
 
 
-__Step 4:__: Configure Virtual Machine Infra Config:
+__Step 4::__ Configure Virtual Machine Infra Config:
 
-ESXi Cluster - HyperFlex
-
-Datastore - SpringpathDS-10.10.20.121
-
-Interface  - VM Network
-
-Resource Pool - Test_Resource_Pool
-
+```
+ESXi Cluster  = HyperFlex
+Datastore     = SpringpathDS-10.10.20.121
+Interface     = VM Network
+Resource Pool = Test_Resource_Pool
+```
 vSphere Admin Passphrase - <Enter the password that you got in your invitation email>
 
 ![](intersight-04-iks-hello-images/infra1.png)
@@ -195,14 +193,13 @@ vSphere Admin Passphrase - <Enter the password that you got in your invitation e
 
 
 
-__Step 5:__: Cofigure Virtual Machine Instance Type
+__Step 5::__ Cofigure Virtual Machine Instance Type
 
-CPU - 4
-
-System Disk Size (GiB) - 40
-
-Memory (MiB) - 16384
-
+```
+CPU                     = 4
+System Disk Size (GiB)  = 40
+Memory (MiB)            = 16384
+```
 ![](intersight-04-iks-hello-images/inst1.png)
 
 ![](intersight-04-iks-hello-images/inst2.png)
@@ -210,13 +207,12 @@ Memory (MiB) - 16384
 ![](intersight-04-iks-hello-images/inst3.png)
 
 
-
 Your policy configuration listing should now looks as follows:
 
 ![](intersight-04-iks-hello-images/pol.png)
 
 
-Your DevOps personnel can now provision an IKS cluster based on the above policies.
+Your DevOps personel can now provision an IKS cluster based on the above policies.
 
 # Use Intersight UI to provision IKS profile for you IKS cluster
 
@@ -224,15 +220,19 @@ Next, you will provision an IKS Profile. This defines the IKS cluster you want t
 
 ![](intersight-04-iks-hello-images/main.png)
 
-__Step 1__: Configire IKS General Info:
+__Step 1__: configure IKS General Info
+Intersight is Multi-Tenant and support different organisation but for this sandbox please select the default organisation.
 
 ![](intersight-04-iks-hello-images/gen.png)
 
 __Step 2__: Configure IKS Cluster - select IP Pool
+This IP Pool will be used for the Loadbalancer Services that we will create at a later stage.
+These are the IP's that will be assisgned to the application running on the IKS cluster 
 
 ![](intersight-04-iks-hello-images/cluster.png)
 
 __Step 3__: Configure IKS Cluster - select Node OS Policy 
+This policy get's mapped under the DNS, NTP and Timezone section.
 
 ![](intersight-04-iks-hello-images/cluster2.png)
 
@@ -242,13 +242,18 @@ __Step 4__: Configure IKS Cluster - select Network CIDR Policy
 
 __Step 5__: Configure IKS Cluster - configure Load Balancer Count and SSH key
 
+BA: Shall we provide them with a default SSH key that they can use and is available on the devbox?
+
 ![](intersight-04-iks-hello-images/cluster4.png)
 
-__Step 6__: Configure Control Plane Node Pool 
+Click next, we won't configure any Trusted Registries or Container Runtime settings for now. 
+
+__Step 6__: Configure Control Plane Node Pool - select Kubernetes Version
 
 ![](intersight-04-iks-hello-images/ctrl.png)
 
 __Step 7__: Configure Control Plane Node Pool - select ippool
+These are the IP's which are getting assigned to the Control PLane VM's
 
 ![](intersight-04-iks-hello-images/ctrl2.png)
 
@@ -260,11 +265,14 @@ __Step 9__: Configure Control Plane Node Pool - select Virtual Machine Instance 
 
 ![](intersight-04-iks-hello-images/ctrl4.png)
 
-__Step 10__: Configure Control Plane Node Pool - select Desired Size for Control Plane
+__Step 10__: Configure Control Plane Node Pool - select Desired,Min and Max Size for Control Plane
+The Min and Max size are for upgrades, the desired size is the amount of control VM's that will be provisioned.
+
+BA: Please use a min size of 1 and a max size of 2. I don't want to strain the resources but we will not do an upgrade so there will never be 2 control vm's
 
 ![](intersight-04-iks-hello-images/ctrl5.png)
 
-__Step 11__: Configure Worker Node Pools - select ippool and number of worker nodes
+__Step 11__: Configure Worker Node Pools - select ippool, name and number of worker nodes
 
 ![](intersight-04-iks-hello-images/worker.png)
 
@@ -284,7 +292,7 @@ __Step 15__: Examine Cluster Provisioning Request Workflow
 
 ![](intersight-04-iks-hello-images/workflow.png)
 
-__Step 16__: Login to Intersight and verify that the cluster is configured:
+__Step 16__: Verify that the cluster is configured:
 
 ![](intersight-04-iks-hello-images/connected.png)
 
@@ -300,23 +308,23 @@ Create a policy for the Dashboard add on:
 
 ![](intersight-04-iks-hello-images/addonpol2.png)
 
-Update the cluster profile and include the add on policy, Deploy:
+Update the cluster profile and include the Add-on policy.
+Leave the other fields empty and hit Deploy:
 
 ![](intersight-04-iks-hello-images/addonprof.png)
 
+
+BA: Add some steps to login to the devbox, download the kubeconfig there, and run the commands below. 
+
 Download the kubeconfig for the cluster updated and execute the following commands to get the token for Dashboard access:
 
+Get the name of the default token
     kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token
+Get the password:
+    kubectl --kubeconfig <cluster-kubeconfig> get secret <name of the default token> -n kube-system -o jsonpath='{.data.token}' | base64 -D
 
-    kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
-
-Get the ingress-controller-IP:
-
-    kubectl --kubeconfig <cluster-kubeconfig> -n iks get svc essential-nginx-ingress-ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
-
-Access the Dashboard at and enter the token acquired above:
-
-    https://<ingress-controller-IP>/dashboard/
+Navigate to Operate -> Kubernetes -> Select your cluster -> Operate -> Add-ons and click on your Add-on
+you should now see your Kubernetes Dashboard and you can login with the Token
 
 ![](intersight-04-iks-hello-images/dash.png)
 
@@ -324,15 +332,11 @@ Access the Dashboard at and enter the token acquired above:
 
 Update the cluster profile and increase the number of worker nodes, Deploy:
 
+BA: Screenshot still shows 1 desired worker node.
+Please use: desired = 2, min = 2, max = 3 
 ![](intersight-04-iks-hello-images/scaleup.png)
 
-Generate token and access the Dashboard:
-
-    kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
-
-    https://<ingress-controller-IP>/dashboard/
-
-Check to see that the cluster has been scaled up:
+Refresh your Kubernetes Dashboard and see that the cluster has been scaled up:
 
 ![](intersight-04-iks-hello-images/dashscale.png)
 
