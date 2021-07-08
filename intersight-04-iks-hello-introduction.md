@@ -319,10 +319,13 @@ BA: Add some steps to login to the devbox, download the kubeconfig there, and ru
 Download the kubeconfig for the cluster updated and execute the following commands to get the token for Dashboard access:
 
 Get the name of the default token
-    kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token
+```
+kubectl --kubeconfig <cluster-kubeconfig> get secrets -n kube-system | grep default-token`
+```
 Get the password:
-    kubectl --kubeconfig <cluster-kubeconfig> get secret <name of the default token> -n kube-system -o jsonpath='{.data.token}' | base64 -D
-
+```
+kubectl --kubeconfig <cluster-kubeconfig> get secret <name of the default token> -n kube-system -o jsonpath='{.data.token}' | base64 -D
+```
 Navigate to Operate -> Kubernetes -> Select your cluster -> Operate -> Add-ons and click on your Add-on
 you should now see your Kubernetes Dashboard and you can login with the Token
 
