@@ -381,7 +381,7 @@ Select all the IKS policies and delete:
 
 # Terminating you sandbox and cleanup
 
-This concludes this learning lab. We hope you got an overview of provisioning and de-provisioning IKS clusters using Intersight UI. If you would like to automate what you just did with Terraform, please check out the following sandbox:
+This concludes this learning lab. We hope you got an overview of provisioning and de-provisioning IKS clusters using Intersight UI. If you would like to automate what you just did using Terraform, please check out the following sandbox:
 
 https://devnetsandbox.cisco.com/RM/Diagram/Index/daad55dd-45f1-46c6-a1b4-7339b318c970?diagramType=Topology
 
