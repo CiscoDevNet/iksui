@@ -273,7 +273,7 @@ __Step 11__: Configure Worker Node Pools - select ippool, name and number of wor
 
 ![](intersight-04-iks-hello-images/worker.png)
 
-__Step 12__: Configure Add-ons
+__Step 12__: Configure Add-ons. You can skip this for now since we will address this in subsequent sections.
 
 ![](intersight-04-iks-hello-images/add.png)
 
