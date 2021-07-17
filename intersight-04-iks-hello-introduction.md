@@ -297,9 +297,9 @@ __Step 16__: Verify that the cluster is configured:
 Your App Developers can now deploy their containerized apps on the IKS cluster using kubectl or helm.
 
 
-# Use Intersight UI to configure IKS add-ons
+# Use Intersight UI to configure IKS Add-ons
 
-1. Connect to the sandbox VPN details of which will be in your invitation email. Also, save the ssh
+1. Connect to the sandbox VPN with the credentials provided in your invitation email.
 
 2. Create a policy for the Dashboard add on:
 
