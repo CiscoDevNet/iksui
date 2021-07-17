@@ -343,9 +343,9 @@ Access the Dashboard at and enter the token acquired above:
 
 ![](intersight-04-iks-hello-images/dashtokcopy.png)
 
-Check out the cluster you just created with the Dashboard
+Check out the cluster you just created with the DashboardYYY
 
-![](intersight-04-iks-hello-images/dash.png)
+![](intersight-04-iks-hello-images/dashtokcopy.png)
 
 # Use Intersight UI to scale up the cluster
 
