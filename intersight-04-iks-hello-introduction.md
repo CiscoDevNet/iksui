@@ -339,14 +339,11 @@ __Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate 
 
 ![](intersight-04-iks-hello-images/dashinv.png)
 
-Access the Dashboard at and enter the token acquired above:XXXX
+Access the Dashboard at and enter the token acquired above:
 
 ![](intersight-04-iks-hello-images/dashtokcopy.png)
 
-
-
-
-
+Check out the cluster you just created with the Dashboard
 
 ![](intersight-04-iks-hello-images/dash.png)
 
