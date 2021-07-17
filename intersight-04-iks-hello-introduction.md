@@ -251,6 +251,7 @@ __Step 6__: Configure Control Plane Node Pool - select Kubernetes Version
 ![](intersight-04-iks-hello-images/ctrl.png)
 
 __Step 7__: Configure Control Plane Node Pool - select ippool
+
 These are the IP's which are getting assigned to the Control PLane VM's.
 
 ![](intersight-04-iks-hello-images/ctrl2.png)
