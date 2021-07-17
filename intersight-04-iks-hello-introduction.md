@@ -341,8 +341,6 @@ __Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate 
 
 Access the Dashboard at and enter the token acquired above:
 
-    https://<ingress-controller-IP>/dashboard/
-
 ![](intersight-04-iks-hello-images/dash.png)
 
 # Use Intersight UI to scale up the cluster
