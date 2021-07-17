@@ -63,7 +63,7 @@ TBD - link to new SB?
 
 *   Follow instructions in the invitaton email to connect to the sandbox VPN (this is necessary to access the vSphere, IKS cluster and App instance later.)
 
-*   Generate SSH keys and make note of the public and private key locations. You will need this in the cluster provisioning and access steps below.
+*   Generate SSH keys and make a note of the public and private keys and their locations. You will need this in the cluster provisioning and access steps below.
 
 ## Pre-configured elements (Sandbox Topology)
 
