@@ -299,19 +299,19 @@ Your App Developers can now deploy their containerized apps on the IKS cluster u
 
 # Use Intersight UI to configure IKS Add-ons
 
-1. Connect to the sandbox VPN with the credentials provided in your invitation email.
+__Step 1__: Connect to the sandbox VPN with the credentials provided in your invitation email.
 
-2. Create a policy for the Dashboard Add-on:
+__Step 2__: Create a policy for the Dashboard Add-on:
 
 ![](intersight-04-iks-hello-images/addonpol.png)
 
 ![](intersight-04-iks-hello-images/addonpol2.png)
 
-3. Update the cluster profile and include the Add-on policy. Leave the other fields empty and hit Deploy:
+__Step 3__: Update the cluster profile and include the Add-on policy. Leave the other fields empty and hit Deploy:
 
 ![](intersight-04-iks-hello-images/addonprof.png)
 
-4. Connect to the control plane node of the cluster that you just created
+__Step 4__: Connect to the control plane node of the cluster that you just created
 
 Get the Control plane node IP:
 
@@ -325,7 +325,7 @@ Connect to control plane node with ssh. Use the private key that you generated b
 
 ssh -i <your_private_ssh_key> iksadmin@<ctrlplanenode-ip>
 
-5. Execute the following commands to get the data for the Dashboard access
+__Step 5__: Execute the following commands to get the data for the Dashboard access
 
 Get the name of the default token:
 
@@ -335,7 +335,7 @@ Get the password:
 
     kubectl --kubeconfig <cluster-kubeconfig> get secret default-tokvv -n kube-system -o jsonpath='{.data.token}' | base64 -D
 
-Navigate to Operate -> Kubernetes -> Select your cluster -> Operate -> Add-ons and click on your Add-on you should now see your Kubernetes Dashboard and you can login with the Token
+__Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate -> Add-ons and click on your Add-on you should now see your Kubernetes Dashboard and you can login with the Token you got in the previous step.
 
 ![](intersight-04-iks-hello-images/dashinv.png)
 
