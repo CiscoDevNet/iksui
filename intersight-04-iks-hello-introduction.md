@@ -301,7 +301,7 @@ Your App Developers can now deploy their containerized apps on the IKS cluster u
 
 1. Connect to the sandbox VPN with the credentials provided in your invitation email.
 
-2. Create a policy for the Dashboard add on:
+2. Create a policy for the Dashboard Add-on:
 
 ![](intersight-04-iks-hello-images/addonpol.png)
 
