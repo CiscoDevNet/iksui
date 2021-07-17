@@ -339,13 +339,13 @@ __Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate 
 
 ![](intersight-04-iks-hello-images/dashinv.png)
 
-Access the Dashboard at and enter the token acquired above:
+Access the Dashboard and enter the token acquired above:
 
-![](intersight-04-iks-hello-images/dashtokcopy.png)
+![](intersight-04-iks-hello-images/xxx.png)
 
-Check out the cluster you just created with the DashboardYYY
+Check out the cluster you just created with the Dashboard
 
-![](intersight-04-iks-hello-images/dashtokcopy.png)
+![](intersight-04-iks-hello-images/dash.png)
 
 # Use Intersight UI to scale up the cluster
 
