@@ -132,7 +132,7 @@ The following are the policies that you can configure:
 
 
 
-__Step 1:__: Configure Kubernetes Version Policy:
+__Step 1:__ Configure Kubernetes Version Policy:
 
 ![](intersight-04-iks-hello-images/kubever1.png)
 
@@ -142,7 +142,7 @@ __Step 1:__: Configure Kubernetes Version Policy:
 
 
 
-__Step 2:__: Configure Network CIDR Policy:
+__Step 2:__ Configure Network CIDR Policy:
 
 ```
 POD Network CIDR - 100.65.0.0/16
@@ -157,7 +157,7 @@ Service CIDR - 100.64.0.0/24
 
 
 
-__Step 3:__: Configure Node OS Policy
+__Step 3:__ Configure Node OS Policy
 
 ```
 Timezone - America/New_York
@@ -174,7 +174,7 @@ NTP Server1 - 10.10.20.100
 
 
 
-__Step 4:__: Configure Virtual Machine Infra Config:
+__Step 4:__ Configure Virtual Machine Infra Config:
 
 ```
 ESXi Cluster - HyperFlex
@@ -192,7 +192,7 @@ vSphere Admin Passphrase - Enter the password that you got in your invitation em
 
 
 
-__Step 5:__: Cofigure Virtual Machine Instance Type
+__Step 5:__ Cofigure Virtual Machine Instance Type
 
 ```
 CPU - 4
