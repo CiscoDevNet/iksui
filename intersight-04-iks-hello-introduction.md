@@ -323,7 +323,7 @@ Download the kubeconfig for the cluster.
 
 Connect to control plane node with ssh. Use the private key that you generated before.
 
-ssh -i <your_private_ssh_key> iksadmin@<ctrlplanenode-ip>
+ssh -i <your_private_ssh_key> iksadmin@  <ctrlplanenode-ip>
 
 __Step 5__: Execute the following commands to get the data for the Dashboard access
 
