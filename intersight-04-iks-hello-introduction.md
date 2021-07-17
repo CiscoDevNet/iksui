@@ -341,7 +341,7 @@ __Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate 
 
 Access the Dashboard at and enter the token acquired above:
 
-![](intersight-04-iks-hello-images/dashtok.png)
+![](intersight-04-iks-hello-images/dashtokcopy.png)
 
 ![](intersight-04-iks-hello-images/dash.png)
 
