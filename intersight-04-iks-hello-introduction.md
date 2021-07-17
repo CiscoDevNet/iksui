@@ -343,7 +343,7 @@ Access the Dashboard and enter the token acquired above:
 
 ![](intersight-04-iks-hello-images/xxx.png)
 
-Check out the cluster you just created with the Dashboard
+Check out the cluster you just created with the Dashboard:
 
 ![](intersight-04-iks-hello-images/dash.png)
 
@@ -363,7 +363,7 @@ Select cluster profile and Undeploy the IKS cluster before deleting it:
 
 ![](intersight-04-iks-hello-images/undeploy.png)
 
-Check the workflow for the undeployment to terminate:
+Track the workflow for the undeployment to terminate:
 
 ![](intersight-04-iks-hello-images/unwf.png)
 
@@ -381,7 +381,10 @@ Select all the IKS policies and delete:
 
 # Terminating you sandbox and cleanup
 
-This concludes this learning lab. We hope you got an overview of provisioning and de-provisioning IKS clusters.
+This concludes this learning lab. We hope you got an overview of provisioning and de-provisioning IKS clusters using Intersight UI. If you would like to automate what you just did with Terraform, please check out the following sandbox:
+
+https://devnetsandbox.cisco.com/RM/Diagram/Index/daad55dd-45f1-46c6-a1b4-7339b318c970?diagramType=Topology
+
 
 Help us terminate the sandbox and prepare it for the next labuser by terminating the sandbox that you just reserved:
 
