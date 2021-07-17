@@ -95,7 +95,7 @@ This is the hypervisor managing the IKS cluster VM’s being created for k8s con
 
 The above targets are required to account for Intersight's integrations with the on prem entities. 
 
-** If the vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation. **
+### If the vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation. 
 
 # Use Intersight UI to provision IP Pool
 
