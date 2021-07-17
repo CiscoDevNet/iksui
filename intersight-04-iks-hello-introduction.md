@@ -339,9 +339,14 @@ __Step 6__: Navigate to Operate -> Kubernetes -> Select your cluster -> Operate 
 
 ![](intersight-04-iks-hello-images/dashinv.png)
 
-Access the Dashboard at and enter the token acquired above:
+Access the Dashboard at and enter the token acquired above:XXXX
 
 ![](intersight-04-iks-hello-images/dashtokcopy.png)
+
+
+
+
+
 
 ![](intersight-04-iks-hello-images/dash.png)
 
