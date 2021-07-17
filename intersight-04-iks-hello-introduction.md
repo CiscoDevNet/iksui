@@ -95,13 +95,13 @@ This is the hypervisor managing the IKS cluster VM’s being created for k8s con
 
 The above targets are required to account for Intersight's integrations with the on prem entities. 
 
-*** If the vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation. ***
+** If the vSphere Target shows as "Not Connected", try editing the Target and changing an attribute like the Datastore Enabled setting and Save. If any of the Targets still shows as "Not Connected" please do not use the sandbox - you can terminate and start another reservation. **
 
 # Use Intersight UI to provision IP Pool
 
 As a Cloud Admin, you will allocate ip pools to the various application teams to provision their IKS clusters. You can either create a single pool that can be used for all of the IKS clusters or provision multiple IP Pools and assign each to individual application teams. 
 
-*** PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION. *** 
+** PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION. **
 
 ![](intersight-04-iks-hello-images/ippool.png)
 
@@ -122,7 +122,7 @@ Number - 20
 
 Next, you will provision IKS policies that will be leveraged by your DevOps teams to provision their IKS cluster. 
 
-*** PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION. ***
+** PLEASE USE THE VALUES SPECIFIED IN THE SNAPSHOTS. THESE ARE THE VALUES THAT APPLY TO THE SANDBOX CONFIGURATION. **
 
 The following are the policies that you can configure:
 
